@@ -36,10 +36,10 @@
         </div>
 
         <div class="d-flex flex-wrap gap-3">
-          <a href="{{ route('donate') }}" class="btn btn-nusa-vermilion btn-lg">
+          <a href="{{ route('donate') }}" class="btn btn-nusa-vermilion btn-lg rounded-pill">
             <i class="fas fa-hand-holding-heart me-2"></i> Salurkan Bantuan
           </a>
-          <a href="#pillars" class="btn btn-outline-light btn-lg" style="border-radius: 8px;">
+          <a href="#pillars" class="btn btn-nusa-outline-light btn-lg rounded-pill">
             Jelajahi 6 Pilar Aksi <i class="fas fa-arrow-down ms-2"></i>
           </a>
         </div>

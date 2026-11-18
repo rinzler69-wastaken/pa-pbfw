@@ -26,11 +26,11 @@
 <body id="body" class="dark-sidebar">
     <!-- left-sidebar -->
     <div class="left-sidebar">
-        <!-- Brand Logo -->
-        <div class="brand py-3 text-center">
-            <a href="{{ route('admin.dashboard') }}" class="nusa-admin-logo">
-                NUSA<span class="dot">.</span>
-                <span class="d-block font-10 text-white-50 fw-normal text-uppercase letter-spacing-1">Admin Console</span>
+        <!-- Brand Logo with Asset-2-light.svg -->
+        <div class="brand py-3 text-center d-flex align-items-center justify-content-center">
+            <a href="{{ route('admin.dashboard') }}" class="d-inline-flex flex-column align-items-center text-decoration-none">
+                <img src="{{ asset('images/Asset-2-light.svg') }}" alt="NUSA Admin" height="34" style="max-height: 34px; width: auto;">
+                <span class="d-block font-9 text-white-50 fw-normal text-uppercase letter-spacing-1 mt-1">Admin Console</span>
             </a>
         </div>
 

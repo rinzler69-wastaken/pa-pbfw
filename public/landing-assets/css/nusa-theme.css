@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* 4. BRAND BUTTONS & ACCENTS */
+/* Pill-shaped buttons with shadows ONLY on hover */
 .btn-nusa-vermilion,
 .btn-primary {
   background-color: var(--nusa-vermilion) !important;
@@ -66,18 +67,18 @@ h1, h2, h3, h4, h5, h6,
   color: #FFFFFF !important;
   font-family: var(--font-body);
   font-weight: 600;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 10px 26px;
+  border-radius: 9999px !important; /* pill shaped */
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 4px 12px rgba(216, 73, 65, 0.22);
+  box-shadow: none !important; /* NO shadow by default */
 }
 
 .btn-nusa-vermilion:hover,
 .btn-primary:hover {
   background-color: var(--nusa-vermilion-hover) !important;
   border-color: var(--nusa-vermilion-hover) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(216, 73, 65, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(216, 73, 65, 0.32) !important; /* shadow only on hover */
 }
 
 .btn-nusa-outline {
@@ -85,13 +86,36 @@ h1, h2, h3, h4, h5, h6,
   border: 1.5px solid var(--nusa-charcoal) !important;
   color: var(--nusa-charcoal) !important;
   font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  padding: 10px 24px;
+  border-radius: 9999px !important; /* pill shaped */
+  transition: all 0.25s ease;
+  box-shadow: none !important;
 }
 
 .btn-nusa-outline:hover {
   background-color: var(--nusa-charcoal) !important;
   color: var(--nusa-warm-white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 47, 57, 0.2) !important;
+}
+
+.btn-nusa-outline-light {
+  background: transparent !important;
+  border: 1.5px solid rgba(244, 243, 238, 0.6) !important;
+  color: var(--nusa-warm-white) !important;
+  font-weight: 600;
+  padding: 10px 26px;
+  border-radius: 9999px !important; /* pill shaped */
+  transition: all 0.25s ease;
+  box-shadow: none !important;
+}
+
+.btn-nusa-outline-light:hover {
+  background-color: rgba(244, 243, 238, 0.15) !important;
+  border-color: var(--nusa-warm-white) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important;
 }
 
 .btn-nusa-green {
@@ -99,12 +123,17 @@ h1, h2, h3, h4, h5, h6,
   border-color: var(--nusa-muted-green) !important;
   color: #FFFFFF !important;
   font-weight: 600;
-  border-radius: 8px;
+  padding: 10px 24px;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+  transition: all 0.25s ease;
 }
 
 .btn-nusa-green:hover {
   background-color: var(--nusa-muted-green-hover) !important;
   border-color: var(--nusa-muted-green-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(102, 138, 120, 0.3) !important;
 }
 
 /* 5. BRAND LOGO STYLING */

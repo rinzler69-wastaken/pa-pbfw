@@ -117,7 +117,7 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-nusa-vermilion btn-lg w-100 fw-bold py-3 shadow">
+            <button type="submit" class="btn btn-nusa-vermilion btn-lg w-100 fw-bold py-3 rounded-pill">
               Lanjut Pembayaran Donasi <i class="fas fa-arrow-right ms-2"></i>
             </button>
           </form>

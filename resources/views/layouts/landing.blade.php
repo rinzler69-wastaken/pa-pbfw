@@ -51,12 +51,9 @@
     <div class="container">
       <div class="d-flex align-items-center justify-content-between">
         
-        <!-- Brand Logo -->
-        <a href="{{ route('home') }}" class="text-decoration-none">
-          <div class="nusa-logo">
-            NUSA<span class="dot">.</span>
-          </div>
-          <span class="nusa-logo-subtitle">Social Impact & Crowdfunding</span>
+        <!-- Brand Logo with Asset-2.svg -->
+        <a href="{{ route('home') }}" class="d-inline-flex align-items-center text-decoration-none py-1">
+          <img src="{{ asset('images/Asset-2.svg') }}" alt="NUSA — Together, We Make a Difference" height="42" style="max-height: 42px; width: auto;" class="d-inline-block">
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -90,9 +87,9 @@
       <div class="row g-4">
         
         <div class="col-lg-4 col-md-6">
-          <div class="nusa-logo text-white mb-2">
-            NUSA<span class="dot">.</span>
-          </div>
+          <a href="{{ route('home') }}" class="d-inline-flex align-items-center text-decoration-none mb-3">
+            <img src="{{ asset('images/Asset-2-light.svg') }}" alt="NUSA" height="40" style="max-height: 40px; width: auto;" class="d-inline-block">
+          </a>
           <p class="small text-white-50 pe-lg-4">
             Platform penggalangan dana dan aksi kemanusiaan untuk mendorong ketahanan, pemberdayaan, dan keberlanjutan sosial-lingkungan di seluruh pelosok Indonesia.
           </p>
