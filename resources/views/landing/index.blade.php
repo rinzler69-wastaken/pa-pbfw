@@ -390,8 +390,8 @@
 
       <div class="col-lg-6">
         <div class="p-5 rounded-4" style="background-color: var(--nusa-charcoal); color: var(--nusa-warm-white);">
-          <div class="nusa-logo text-white mb-2">
-            NUSA<span class="dot">.</span>
+          <div class="mb-3">
+            <img src="{{ asset('images/Asset-2-light.svg') }}" alt="NUSA" height="46" style="max-height: 46px; width: auto;" class="d-inline-block">
           </div>
           <h4 class="fw-bold mb-3" style="color: var(--nusa-warm-white); font-family: var(--font-heading);">
             Together, We Make a Difference.
@@ -399,7 +399,7 @@
           <p class="text-white-50 mb-4">
             Bergabunglah bersama ribuan relawan dan donatur yang telah menggerakkan dampak nyata bagi sesama di penjuru nusantara.
           </p>
-          <a href="{{ route('donate') }}" class="btn btn-nusa-vermilion">
+          <a href="{{ route('donate') }}" class="btn btn-nusa-vermilion rounded-pill">
             Mulai Berpartisipasi Hari Ini
           </a>
         </div>
