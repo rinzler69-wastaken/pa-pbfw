@@ -1,0 +1,88 @@
+/* ==========================================================================
+   NUSA ADMIN CONSOLE THEME
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/400.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/600.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/700.css');
+
+:root {
+  --nusa-vermilion: #D84941;
+  --nusa-charcoal: #252F39;
+  --nusa-charcoal-dark: #1A2128;
+  --nusa-warm-white: #F4F3EE;
+  --nusa-muted-green: #668A78;
+  
+  --font-heading: 'Metropolis', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--nusa-warm-white) !important;
+  color: var(--nusa-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title,
+.card-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+  background-color: var(--nusa-charcoal-dark) !important;
+}
+
+.left-sidebar .brand {
+  background-color: var(--nusa-charcoal-dark) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.nusa-admin-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
+.nusa-admin-logo span.dot {
+  color: var(--nusa-vermilion);
+}
+
+.menu-label {
+  color: var(--nusa-muted-green) !important;
+  font-weight: 700 !important;
+}
+
+.navbar-vertical .nav-link.active,
+.navbar-vertical .nav-link:hover {
+  color: var(--nusa-vermilion) !important;
+}
+
+.navbar-vertical .nav-link.active i {
+  color: var(--nusa-vermilion) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--nusa-vermilion) !important;
+  border-color: var(--nusa-vermilion) !important;
+}
+
+.btn-primary:hover {
+  background-color: #C23B33 !important;
+  border-color: #C23B33 !important;
+}
+
+.text-primary {
+  color: var(--nusa-vermilion) !important;
+}
+
+.bg-primary {
+  background-color: var(--nusa-vermilion) !important;
+}

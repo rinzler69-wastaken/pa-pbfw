@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@yield('title', 'Platform Penggalangan Dana & Donasi Online')</title>
+  <title>@yield('title', 'NUSA — Social Impact & Humanitarian Crowdfunding Platform')</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('landing-assets/images/cropped-favicon-32x32.png') }}">
@@ -17,167 +17,136 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('landing-assets/css/styles.css') }}">
 
+  <!-- NUSA Custom Brand System (Inter & Metropolis Fonts + Palettes) -->
+  <link rel="stylesheet" href="{{ asset('landing-assets/css/nusa-theme.css') }}">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   @stack('styles')
 </head>
 <body>
 
-  <!-- Header Section Start -->
-  <header class="position-relative z-3">
-    <!-- Top Bar -->
-    <div class="header-top py-2 bg-secondary text-white">
-      <div class="container">
-        <div class="header-top-inner">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-7">
-              <div class="header-top-left">
-                <ul class="list-unstyled d-flex gap-3 small mb-0">
-                  <li><i class="fas fa-phone me-2 text-primary"></i>+62 (021) 555-0199</li>
-                  <li><i class="far fa-envelope me-2 text-primary"></i>peduli@donasi.id</li>
-                  <li class="d-none d-sm-inline"><i class="fas fa-shield-alt me-2 text-primary"></i>Aman & Terpercaya</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-5">
-              <div class="header-top-right d-flex align-items-center justify-content-end gap-3">
-                <a href="{{ route('admin.dashboard') }}" class="small text-white-50 text-decoration-none hover-white">
-                  <i class="fas fa-user-shield me-1"></i> Panel Admin
-                </a>
-                <a href="{{ route('donate') }}" class="btn-primary text-decoration-none py-1 px-3 small rounded">
-                  Donasi Sekarang <i class="fas fa-heart ms-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+  <!-- Top Bar -->
+  <div class="header-top py-2">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between small">
+        <div class="d-flex align-items-center gap-3">
+          <span><i class="fas fa-shield-alt text-warning me-1"></i> Platform Terpercaya Gotong Royong Indonesia</span>
+          <span class="d-none d-md-inline opacity-50">|</span>
+          <span class="d-none d-md-inline">6 Pilar Aksi Berkelanjutan</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="{{ route('admin.dashboard') }}" class="text-white-50 text-decoration-none">
+            <i class="fas fa-chart-pie me-1"></i> NUSA Admin Console
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Main Navigation Bar -->
-    <div class="header-nav header-nav-menu py-3" id="header-nav-menu">
-      <div class="container">
-        <div class="header-nav-inner d-flex justify-content-between align-items-center">
-          <div class="header-logo">
-            <a href="{{ route('home') }}" class="d-flex align-items-center text-decoration-none">
-              <img src="{{ asset('landing-assets/images/logo1.png') }}" alt="Logo" style="max-height: 46px;">
-            </a>
+  <!-- Header Navigation -->
+  <header class="header-nav py-3 sticky-top">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <!-- Brand Logo -->
+        <a href="{{ route('home') }}" class="text-decoration-none">
+          <div class="nusa-logo">
+            NUSA<span class="dot">.</span>
           </div>
+          <span class="nusa-logo-subtitle">Social Impact & Crowdfunding</span>
+        </a>
 
-          <div class="header-nav-right d-flex align-items-center">
-            <div class="navbar-collapse justify-content-center" id="bs-example-navbar-collapse-1">
-              <ul class="navbar-nav flex-row align-items-center gap-4" id="responsive-menu">
-                <li class="nav-item">
-                  <a class="nav-link text fw-bold {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
-                    Beranda
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text fw-bold {{ request()->routeIs('campaigns*') ? 'active' : '' }}" href="{{ route('campaigns.index') }}">
-                    Program Donasi
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text fw-bold" href="#about-section">Tentang Kami</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text fw-bold" href="#stat-section">Transparansi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text fw-bold {{ request()->routeIs('donate') ? 'active' : '' }}" href="{{ route('donate') }}">
-                    Salurkan Donasi
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div id="slicknav-mobile"></div>
+        <!-- Desktop Navigation Links -->
+        <nav class="d-none d-lg-flex align-items-center gap-1">
+          <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
+          <a class="nav-link {{ request()->routeIs('campaigns*') ? 'active' : '' }}" href="{{ route('campaigns.index') }}">Inisiatif & Program</a>
+          <a class="nav-link" href="{{ route('home') }}#pillars">6 Fokus NUSA</a>
+          <a class="nav-link" href="{{ route('home') }}#impact">Dampak Kolektif</a>
+          <a class="nav-link" href="{{ route('home') }}#about-nusa">Tentang Kami</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="d-flex align-items-center gap-2">
+          <a href="{{ route('donate') }}" class="btn btn-nusa-vermilion">
+            <i class="fas fa-heart me-1"></i> Donasi Sekarang
+          </a>
         </div>
+
       </div>
     </div>
   </header>
-  <!-- Header Section End -->
 
   <!-- Main Content -->
   <main>
     @yield('content')
   </main>
 
-  <!-- Footer Section Start -->
-  <footer class="footer bg-secondary text-white pt-5">
-    <div class="container">
-      <div class="footer-inner pb-5">
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-about">
-              <img src="{{ asset('landing-assets/images/logo-w.png') }}" alt="Logo Footer" class="mb-3" style="max-height: 42px;">
-              <p class="text-white-50">
-                Wadah gotong royong dan penggalangan dana online transparan untuk membantu sesama yang membutuhkan bantuan medis, pendidikan, bencana alam, dan kemanusiaan.
-              </p>
-              <div class="social-links d-flex gap-3 mt-3">
-                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
+  <!-- NUSA Footer -->
+  <footer class="nusa-footer pt-5 mt-5">
+    <div class="container pb-4">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="nusa-logo text-white mb-2">
+            NUSA<span class="dot">.</span>
           </div>
-
-          <div class="col-lg-2 col-md-6">
-            <div class="footer-links">
-              <h5 class="text-white mb-3">Navigasi</h5>
-              <ul class="list-unstyled text-white-50">
-                <li class="mb-2"><a href="{{ route('home') }}" class="text-white-50 text-decoration-none">Beranda</a></li>
-                <li class="mb-2"><a href="{{ route('campaigns.index') }}" class="text-white-50 text-decoration-none">Program Donasi</a></li>
-                <li class="mb-2"><a href="{{ route('donate') }}" class="text-white-50 text-decoration-none">Cara Donasi</a></li>
-                <li class="mb-2"><a href="{{ route('admin.dashboard') }}" class="text-white-50 text-decoration-none">Admin Panel</a></li>
-              </ul>
-            </div>
+          <p class="small text-white-50 pe-lg-4">
+            Platform penggalangan dana dan aksi kemanusiaan untuk mendorong ketahanan, pemberdayaan, dan keberlanjutan sosial-lingkungan di seluruh pelosok Indonesia.
+          </p>
+          <div class="d-inline-block px-3 py-1 rounded-pill bg-dark bg-opacity-50 border border-secondary text-white-50 small mt-2">
+            <strong>Tagline:</strong> Together, We Make a Difference.
           </div>
+        </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-contact">
-              <h5 class="text-white mb-3">Hubungi Kami</h5>
-              <ul class="list-unstyled text-white-50">
-                <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Jl. Pemuda Kemanusiaan No. 7, Jakarta</li>
-                <li class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> bantuan@donasi.id</li>
-                <li><i class="fas fa-phone me-2 text-primary"></i> +62 812-3456-7890</li>
-              </ul>
-            </div>
-          </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="text-white fw-bold mb-3">6 Fokus NUSA</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}?category=environment" class="text-decoration-none">Environmental</a></li>
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}?category=disaster" class="text-decoration-none">Disaster Relief</a></li>
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}?category=health" class="text-decoration-none">Health & Wellbeing</a></li>
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}?category=economic" class="text-decoration-none">Economic Empowerment</a></li>
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}?category=education" class="text-decoration-none">Education</a></li>
+            <li><a href="{{ route('campaigns.index') }}?category=social" class="text-decoration-none">Social Welfare</a></li>
+          </ul>
+        </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-badge">
-              <h5 class="text-white mb-3">Aman & Terpercaya</h5>
-              <p class="small text-white-50">
-                Setiap donasi yang masuk diawasi dan tercatat secara transparan dengan audit berkala.
-              </p>
-              <div class="p-3 bg-dark bg-opacity-25 rounded border border-secondary">
-                <div class="d-flex align-items-center">
-                  <i class="fas fa-check-circle text-success fs-3 me-3"></i>
-                  <div>
-                    <h6 class="text-white mb-0">100% Terverifikasi</h6>
-                    <small class="text-white-50">Lembaga Amal Resmi</small>
-                  </div>
-                </div>
-              </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="text-white fw-bold mb-3">Tautan Cepat</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="{{ route('home') }}" class="text-decoration-none">Beranda</a></li>
+            <li class="mb-2"><a href="{{ route('campaigns.index') }}" class="text-decoration-none">Semua Inisiatif</a></li>
+            <li class="mb-2"><a href="{{ route('donate') }}" class="text-decoration-none">Salurkan Donasi</a></li>
+            <li class="mb-2"><a href="{{ route('admin.dashboard') }}" class="text-decoration-none">Admin Console</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6 class="text-white fw-bold mb-3">Transparansi & Akuntabilitas</h6>
+          <p class="small text-white-50">
+            Setiap inisiatif diaudit berkala dengan publikasi progres terperinci kepada donatur dan masyarakat.
+          </p>
+          <div class="p-3 rounded-3 bg-dark bg-opacity-25 border border-secondary d-flex align-items-center gap-3">
+            <i class="fas fa-check-double text-success fs-3"></i>
+            <div>
+              <div class="text-white fw-bold small">Laporan Dampak Terverifikasi</div>
+              <small class="text-white-50">Lembaga Kemanusiaan Berizin Resmi</small>
             </div>
           </div>
         </div>
+
       </div>
 
-      <div class="footer-bottom border-top border-secondary py-3 text-center text-white-50 small">
-        <p class="mb-0">&copy; {{ date('Y') }} Project Akhir PBF - Platform Penggalangan Dana Online.</p>
+      <div class="border-top border-secondary mt-5 pt-3 text-center small text-white-50">
+        <p class="mb-0">&copy; {{ date('Y') }} <strong>NUSA</strong> — A collective platform for a more resilient, empowered, and sustainable Indonesia.</p>
       </div>
     </div>
   </footer>
-  <!-- Footer Section End -->
 
   <!-- Scripts -->
   <script src="{{ asset('landing-assets/js/jquery-3.7.1.min.js') }}"></script>
   <script src="{{ asset('landing-assets/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('landing-assets/js/plugin.js') }}"></script>
-  <script src="{{ asset('landing-assets/js/main.js') }}"></script>
   @stack('scripts')
 </body>
 </html>

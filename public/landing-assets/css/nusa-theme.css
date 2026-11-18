@@ -1,0 +1,227 @@
+/* ==========================================================================
+   NUSA BRAND DESIGN SYSTEM & THEME
+   Together, We Make a Difference.
+   ========================================================================== */
+
+/* 1. TYPOGRAPHY IMPORTS */
+/* Inter for high-legibility UI, body text, and reading */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Metropolis by Chris Simpson (Geometric Sans) for Headings & Display */
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/400.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/500.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/600.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/700.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/800.css');
+
+/* 2. DESIGN TOKENS */
+:root {
+  /* Exact Concept Swatches */
+  --nusa-vermilion: #D84941;
+  --nusa-vermilion-hover: #C23B33;
+  --nusa-vermilion-subtle: #FDF1F0;
+  
+  --nusa-charcoal: #252F39;
+  --nusa-charcoal-dark: #192128;
+  --nusa-charcoal-surface: #2E3944;
+  --nusa-charcoal-muted: #64748B;
+  
+  --nusa-warm-white: #F4F3EE;
+  --nusa-warm-white-surface: #FAFAF7;
+  --nusa-pure-white: #FFFFFF;
+  
+  --nusa-muted-green: #668A78;
+  --nusa-muted-green-hover: #557766;
+  --nusa-muted-green-light: #EBF2EE;
+
+  /* Font Stacks */
+  --font-heading: 'Metropolis', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 3. BASE RESET & TYPOGRAPHY */
+body {
+  font-family: var(--font-body) !important;
+  color: var(--nusa-charcoal);
+  background-color: var(--nusa-warm-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings with Metropolis */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.nusa-font-metropolis,
+.card-title,
+.navbar-brand,
+.page-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  color: var(--nusa-charcoal);
+  letter-spacing: -0.02em;
+}
+
+/* 4. BRAND BUTTONS & ACCENTS */
+.btn-nusa-vermilion,
+.btn-primary {
+  background-color: var(--nusa-vermilion) !important;
+  border-color: var(--nusa-vermilion) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(216, 73, 65, 0.22);
+}
+
+.btn-nusa-vermilion:hover,
+.btn-primary:hover {
+  background-color: var(--nusa-vermilion-hover) !important;
+  border-color: var(--nusa-vermilion-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(216, 73, 65, 0.3);
+}
+
+.btn-nusa-outline {
+  background: transparent !important;
+  border: 1.5px solid var(--nusa-charcoal) !important;
+  color: var(--nusa-charcoal) !important;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-nusa-outline:hover {
+  background-color: var(--nusa-charcoal) !important;
+  color: var(--nusa-warm-white) !important;
+}
+
+.btn-nusa-green {
+  background-color: var(--nusa-muted-green) !important;
+  border-color: var(--nusa-muted-green) !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-nusa-green:hover {
+  background-color: var(--nusa-muted-green-hover) !important;
+  border-color: var(--nusa-muted-green-hover) !important;
+}
+
+/* 5. BRAND LOGO STYLING */
+.nusa-logo {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--nusa-charcoal);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nusa-logo span.dot {
+  color: var(--nusa-vermilion);
+  margin-left: 2px;
+}
+
+.nusa-logo-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--nusa-charcoal-muted);
+  display: block;
+  margin-top: -4px;
+}
+
+/* 6. TOPBAR & NAVBAR */
+.header-top {
+  background-color: var(--nusa-charcoal-dark) !important;
+  color: rgba(244, 243, 238, 0.75);
+}
+
+.header-nav {
+  background-color: var(--nusa-warm-white) !important;
+  border-bottom: 1px solid rgba(37, 47, 57, 0.08);
+}
+
+.header-nav .nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--nusa-charcoal) !important;
+  padding: 8px 16px !important;
+  transition: color 0.2s ease;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link.active {
+  color: var(--nusa-vermilion) !important;
+  font-weight: 600;
+}
+
+/* 7. PROGRESS BAR & CARDS */
+.progress {
+  background-color: rgba(37, 47, 57, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-nusa,
+.progress-bar {
+  background-color: var(--nusa-vermilion) !important;
+  border-radius: 999px;
+}
+
+.card {
+  background-color: var(--nusa-pure-white);
+  border: 1px solid rgba(37, 47, 57, 0.08) !important;
+  border-radius: 14px !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37, 47, 57, 0.08) !important;
+}
+
+/* 8. BADGES & PILLS */
+.badge-pillar {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.badge-environment { background-color: var(--nusa-muted-green-light); color: var(--nusa-muted-green); }
+.badge-disaster { background-color: var(--nusa-vermilion-subtle); color: var(--nusa-vermilion); }
+.badge-health { background-color: #FEF2F2; color: #DC2626; }
+.badge-economic { background-color: #FEF3C7; color: #D97706; }
+.badge-education { background-color: #EFF6FF; color: #2563EB; }
+.badge-social { background-color: #F3E8FF; color: #7E22CE; }
+
+/* 9. FOOTER */
+.nusa-footer {
+  background-color: var(--nusa-charcoal) !important;
+  color: rgba(244, 243, 238, 0.75);
+}
+
+.nusa-footer h5,
+.nusa-footer h4 {
+  color: var(--nusa-warm-white) !important;
+}
+
+.nusa-footer a {
+  color: rgba(244, 243, 238, 0.7);
+  transition: color 0.2s ease;
+}
+
+.nusa-footer a:hover {
+  color: var(--nusa-vermilion) !important;
+}

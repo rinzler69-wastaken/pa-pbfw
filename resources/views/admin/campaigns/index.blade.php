@@ -1,33 +1,35 @@
 @extends('layouts.admin')
 
-@section('title', 'Manajemen Program Donasi - Admin')
-@section('page-title', 'Kelola Program Penggalangan Dana')
+@section('title', 'Manajemen Inisiatif — NUSA Admin')
+@section('page-title', 'Kelola Inisiatif Penggalangan Dana')
 
 @section('breadcrumb')
-<li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-<li class="breadcrumb-item active">Program Donasi</li>
+<li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">NUSA Console</a></li>
+<li class="breadcrumb-item active">Inisiatif</li>
 @endsection
 
 @section('content')
 <div class="row">
     <div class="col-12">
-        <div class="card">
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h4 class="card-title mb-0">Daftar Semua Kampanye</h4>
-                <a href="{{ route('admin.campaigns.create') }}" class="btn btn-primary btn-sm">
-                    <i class="ti ti-plus me-1"></i> Buat Program Baru
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0" style="font-family: var(--font-heading); color: var(--nusa-charcoal);">
+                    Daftar Semua Inisiatif Terdaftar (6 Pilar)
+                </h5>
+                <a href="{{ route('admin.campaigns.create') }}" class="btn btn-sm" style="background-color: var(--nusa-vermilion); color: white;">
+                    <i class="ti ti-plus me-1"></i> Inisiasi Program Baru
                 </a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped align-middle mb-0">
+                    <table class="table table-hover align-middle mb-0">
                         <thead class="table-light">
                             <tr>
                                 <th>#</th>
-                                <th>Program Donasi</th>
-                                <th>Kategori</th>
-                                <th>Target Dana</th>
-                                <th>Terkumpul</th>
+                                <th>Inisiatif</th>
+                                <th>Pilar Utama</th>
+                                <th>Target Kebutuhan</th>
+                                <th>Dukungan Masuk</th>
                                 <th>Capaian</th>
                                 <th>Status</th>
                                 <th class="text-end">Aksi</th>
@@ -37,17 +39,17 @@
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    <strong>Bantu Dek Alif Berjuang Melawan Kelainan Jantung</strong>
-                                    <br><small class="text-muted"><i class="ti ti-calendar me-1"></i> Batas: 24 Nov 2026</small>
+                                    <strong>Bantuan Logistik & Medis Darurat Korban Erupsi</strong>
+                                    <br><small class="text-muted"><i class="ti ti-map-pin me-1"></i> Flores Timur, NTT</small>
                                 </td>
-                                <td><span class="badge bg-danger">Medis</span></td>
-                                <td>Rp 60.000.000</td>
-                                <td class="text-success fw-bold">Rp 45.000.000</td>
+                                <td><span class="badge" style="background-color: var(--nusa-vermilion-subtle); color: var(--nusa-vermilion);">Disaster Relief</span></td>
+                                <td>Rp 200.000.000</td>
+                                <td class="fw-bold" style="color: var(--nusa-vermilion);">Rp 156.400.000</td>
                                 <td style="width: 140px;">
                                     <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                        <div class="progress-bar" style="width: 78%; background-color: var(--nusa-vermilion);"></div>
                                     </div>
-                                    <small class="text-muted">75%</small>
+                                    <small class="text-muted font-11">78%</small>
                                 </td>
                                 <td><span class="badge bg-success">Aktif</span></td>
                                 <td class="text-end">
@@ -58,17 +60,17 @@
                             <tr>
                                 <td>2</td>
                                 <td>
-                                    <strong>Renovasi Gedung Belajar SD Pelosok Negeri</strong>
-                                    <br><small class="text-muted"><i class="ti ti-calendar me-1"></i> Batas: 02 Des 2026</small>
+                                    <strong>Renovasi Fasilitas Belajar SD Pedalaman</strong>
+                                    <br><small class="text-muted"><i class="ti ti-map-pin me-1"></i> Solor Selatan, NTT</small>
                                 </td>
-                                <td><span class="badge bg-warning text-dark">Pendidikan</span></td>
+                                <td><span class="badge bg-light text-primary border">Education</span></td>
                                 <td>Rp 50.000.000</td>
-                                <td class="text-success fw-bold">Rp 21.000.000</td>
+                                <td class="fw-bold" style="color: var(--nusa-vermilion);">Rp 21.000.000</td>
                                 <td style="width: 140px;">
                                     <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 42%"></div>
+                                        <div class="progress-bar" style="width: 42%; background-color: var(--nusa-vermilion);"></div>
                                     </div>
-                                    <small class="text-muted">42%</small>
+                                    <small class="text-muted font-11">42%</small>
                                 </td>
                                 <td><span class="badge bg-success">Aktif</span></td>
                                 <td class="text-end">
@@ -79,21 +81,21 @@
                             <tr>
                                 <td>3</td>
                                 <td>
-                                    <strong>Paket Pangan & Sembako untuk 500 Lansia Dhuafa</strong>
-                                    <br><small class="text-muted"><i class="ti ti-calendar me-1"></i> Batas: 21 Nov 2026</small>
+                                    <strong>Penanaman 10.000 Mangrove Penahan Abrasi</strong>
+                                    <br><small class="text-muted"><i class="ti ti-map-pin me-1"></i> Demak, Jawa Tengah</small>
                                 </td>
-                                <td><span class="badge bg-info text-dark">Kemanusiaan</span></td>
-                                <td>Rp 35.000.000</td>
-                                <td class="text-success fw-bold">Rp 31.150.000</td>
+                                <td><span class="badge" style="background-color: var(--nusa-muted-green-light); color: var(--nusa-muted-green);">Environmental</span></td>
+                                <td>Rp 60.000.000</td>
+                                <td class="fw-bold" style="color: var(--nusa-vermilion);">Rp 39.000.000</td>
                                 <td style="width: 140px;">
                                     <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 89%"></div>
+                                        <div class="progress-bar" style="width: 65%; background-color: var(--nusa-muted-green);"></div>
                                     </div>
-                                    <small class="text-muted">89%</small>
+                                    <small class="text-muted font-11">65%</small>
                                 </td>
                                 <td><span class="badge bg-success">Aktif</span></td>
                                 <td class="text-end">
-                                    <a href="{{ route('campaigns.show', 3) }}" target="_blank" class="btn btn-sm btn-outline-info" title="Lihat"><i class="ti ti-eye"></i></a>
+                                    <a href="{{ route('campaigns.show', 4) }}" target="_blank" class="btn btn-sm btn-outline-info" title="Lihat"><i class="ti ti-eye"></i></a>
                                     <a href="#" class="btn btn-sm btn-outline-warning" title="Edit"><i class="ti ti-pencil"></i></a>
                                 </td>
                             </tr>
