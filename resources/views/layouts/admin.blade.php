@@ -15,6 +15,8 @@
     <link href="{{ asset('admin-assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin-assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
+    <!-- Self-Hosted Metropolis Geometric Sans Font -->
+    <link rel="stylesheet" href="{{ asset('fonts/metropolis/metropolis.css') }}">
     <!-- NUSA Admin Theme (Metropolis & Inter + NUSA Palette) -->
     <link href="{{ asset('admin-assets/css/nusa-admin-theme.css') }}" rel="stylesheet" type="text/css" />
 

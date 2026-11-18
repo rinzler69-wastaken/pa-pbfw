@@ -1,0 +1,74 @@
+/* ==========================================================================
+   METROPOLIS GEOMETRIC SANS FONT (By Chris Simpson)
+   Self-hosted Webfont Definition
+   ========================================================================== */
+
+/* Regular 400 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./metropolis-latin-400-normal.woff2') format('woff2'),
+       url('./metropolis-latin-400-normal.woff') format('woff');
+}
+
+/* Regular 400 Italic */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./metropolis-latin-400-italic.woff2') format('woff2'),
+       url('./metropolis-latin-400-italic.woff') format('woff');
+}
+
+/* Medium 500 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./metropolis-latin-500-normal.woff2') format('woff2'),
+       url('./metropolis-latin-500-normal.woff') format('woff');
+}
+
+/* Semi-bold 600 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./metropolis-latin-600-normal.woff2') format('woff2'),
+       url('./metropolis-latin-600-normal.woff') format('woff');
+}
+
+/* Bold 700 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./metropolis-latin-700-normal.woff2') format('woff2'),
+       url('./metropolis-latin-700-normal.woff') format('woff');
+}
+
+/* Extra-bold 800 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./metropolis-latin-800-normal.woff2') format('woff2'),
+       url('./metropolis-latin-800-normal.woff') format('woff');
+}
+
+/* Black 900 */
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./metropolis-latin-900-normal.woff2') format('woff2'),
+       url('./metropolis-latin-900-normal.woff') format('woff');
+}

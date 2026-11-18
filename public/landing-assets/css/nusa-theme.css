@@ -7,12 +7,8 @@
 /* Inter for high-legibility UI, body text, and reading */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Metropolis by Chris Simpson (Geometric Sans) for Headings & Display */
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/400.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/500.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/600.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/700.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/800.css');
+/* Metropolis by Chris Simpson (Geometric Sans) - Self-Hosted Local Webfont */
+@import url('../../fonts/metropolis/metropolis.css');
 
 /* 2. DESIGN TOKENS */
 :root {
@@ -225,3 +221,4 @@ h1, h2, h3, h4, h5, h6,
 .nusa-footer a:hover {
   color: var(--nusa-vermilion) !important;
 }
+

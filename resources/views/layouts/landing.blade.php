@@ -17,6 +17,8 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('landing-assets/css/styles.css') }}">
 
+  <!-- Self-Hosted Metropolis Geometric Sans Font -->
+  <link rel="stylesheet" href="{{ asset('fonts/metropolis/metropolis.css') }}">
   <!-- NUSA Custom Brand System (Inter & Metropolis Fonts + Palettes) -->
   <link rel="stylesheet" href="{{ asset('landing-assets/css/nusa-theme.css') }}">
 

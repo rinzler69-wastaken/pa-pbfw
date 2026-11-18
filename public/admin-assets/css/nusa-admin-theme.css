@@ -2,9 +2,7 @@
    NUSA ADMIN CONSOLE THEME
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/400.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/600.css');
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.19/700.css');
+@import url('../../fonts/metropolis/metropolis.css');
 
 :root {
   --nusa-vermilion: #D84941;
@@ -86,3 +84,4 @@ h1, h2, h3, h4, h5, h6,
 .bg-primary {
   background-color: var(--nusa-vermilion) !important;
 }
+
